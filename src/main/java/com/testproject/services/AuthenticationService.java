@@ -34,9 +34,9 @@ public class AuthenticationService {
 
             String token = tokenService.generateJwt(auth);
             
-            return new LoginDTO(token);
+            return new LoginDTO(token,"");
         } catch (Exception e) {
-            return new LoginDTO("");
+            return new LoginDTO("","Bad Credentials");
         }
 
     }
